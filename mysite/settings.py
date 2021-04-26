@@ -26,7 +26,7 @@ SECRET_KEY = 'ht3b3%&mf_tbx8l39^*w4w)uw6ys0)byqz#&ln#l62-3h(auo1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["yae-folio.com"]
 
 
 # Application definition
@@ -78,8 +78,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django_db',
+        'USER': 'db_yaekawabata',
+        'PASSWORD': 'Bumpyk1006!',
+        'HOST': 'localhost',
+        'PORT': '',
+        
     }
 }
 
